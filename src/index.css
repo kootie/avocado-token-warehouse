@@ -8,40 +8,40 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Kenya WRS Color Palette */
-    --background: 244 247 246; /* #f4f7f6 - Background Gray */
-    --foreground: 132 142 60; /* Deep text from primary green */
+    /* Kenya WRS Color Palette - Proper HSL Values */
+    --background: 144 20% 96%; /* Light grayish green background */
+    --foreground: 144 30% 25%; /* Dark green text */
 
-    --card: 0 0% 100%; /* White */
-    --card-foreground: 132 142 60;
+    --card: 0 0% 100%; /* Pure white */
+    --card-foreground: 144 30% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 132 142 60;
+    --popover-foreground: 144 30% 25%;
 
-    --primary: 132 142 60; /* #388e3c - Primary Green */
+    --primary: 122 39% 49%; /* #388e3c - Primary Green */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 76 39 74; /* #8bc34a - Secondary Green */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 88 50% 53%; /* #8bc34a - Secondary Green (lighter) */
+    --secondary-foreground: 144 30% 25%;
 
-    --muted: 195 100% 97%; /* #e3f2fd - Soft Blue */
-    --muted-foreground: 132 142 60;
+    --muted: 144 20% 94%; /* Very light green muted */
+    --muted-foreground: 144 15% 45%;
 
-    --accent: 79 59 69; /* #a8e063 - Accent Green */
-    --accent-foreground: 132 142 60;
+    --accent: 84 65% 59%; /* #a8e063 - Accent Green (lighter) */
+    --accent-foreground: 144 30% 25%;
 
-    --success: 85 39 47; /* #56ab2f - Deep Green */
+    --success: 104 61% 36%; /* #56ab2f - Deep Green */
     --success-foreground: 0 0% 100%;
 
-    --info: 180 100% 94%; /* #e0f7fa - Soft Teal */
-    --info-foreground: 132 142 60;
+    --info: 187 100% 94%; /* Soft teal */
+    --info-foreground: 144 30% 25%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 195 100% 92%;
-    --input: 195 100% 97%;
-    --ring: 132 142 60;
+    --border: 144 20% 85%;
+    --input: 144 15% 93%;
+    --ring: 122 39% 49%;
 
     --radius: 0.75rem;
 
@@ -63,39 +63,39 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 132 142 20; /* Dark version of primary green */
-    --foreground: 0 0% 98%;
+    --background: 144 30% 10%; /* Dark green background */
+    --foreground: 144 10% 90%;
 
-    --card: 132 142 25;
-    --card-foreground: 0 0% 98%;
+    --card: 144 25% 15%;
+    --card-foreground: 144 10% 90%;
 
-    --popover: 132 142 25;
-    --popover-foreground: 0 0% 98%;
+    --popover: 144 25% 15%;
+    --popover-foreground: 144 10% 90%;
 
-    --primary: 76 39 74; /* Secondary Green for dark mode */
-    --primary-foreground: 132 142 20;
+    --primary: 88 50% 53%; /* Lighter green for dark mode */
+    --primary-foreground: 144 30% 10%;
 
-    --secondary: 132 142 35;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 122 39% 49%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 132 142 30;
-    --muted-foreground: 195 100% 85%;
+    --muted: 144 25% 20%;
+    --muted-foreground: 144 10% 70%;
 
-    --accent: 79 59 69;
-    --accent-foreground: 132 142 20;
+    --accent: 84 65% 59%;
+    --accent-foreground: 144 30% 10%;
 
-    --success: 85 39 47;
+    --success: 104 61% 36%;
     --success-foreground: 0 0% 100%;
 
-    --info: 180 100% 20;
-    --info-foreground: 0 0% 98%;
+    --info: 187 50% 25%;
+    --info-foreground: 144 10% 90%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 132 142 35;
-    --input: 132 142 35;
-    --ring: 76 39 74;
+    --border: 144 25% 25%;
+    --input: 144 25% 25%;
+    --ring: 88 50% 53%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
