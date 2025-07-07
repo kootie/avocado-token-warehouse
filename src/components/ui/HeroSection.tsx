@@ -44,12 +44,11 @@ export const HeroSection = () => {
               ))}
             </div>
 
-            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="hero-gradient font-semibold px-8 py-4 text-lg avocado-shadow">
+              <Button size="lg" className="hero-gradient font-semibold px-8 py-4 text-lg avocado-shadow" onClick={() => window.location.href = '/deposit'}>
                 Store Your Harvest
               </Button>
-              <Button variant="outline" size="lg" className="font-semibold px-8 py-4 text-lg">
+              <Button variant="outline" size="lg" className="font-semibold px-8 py-4 text-lg" onClick={() => window.location.href = '/how-it-works'}>
                 Watch Demo
               </Button>
             </div>

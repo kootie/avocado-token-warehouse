@@ -41,30 +41,26 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-foreground hover:text-primary transition-colors font-medium">
+            <a href="/" className="text-foreground hover:text-primary transition-colors font-medium">
               Home
             </a>
-            <a href="#features" className="text-foreground hover:text-primary transition-colors font-medium">
-              Features
-            </a>
-            <a href="#how-it-works" className="text-foreground hover:text-primary transition-colors font-medium">
+            <a href="/how-it-works" className="text-foreground hover:text-primary transition-colors font-medium">
               How It Works
             </a>
-            <a href="#farmers" className="text-foreground hover:text-primary transition-colors font-medium">
-              For Farmers
+            <a href="/dashboard" className="text-foreground hover:text-primary transition-colors font-medium">
+              Dashboard
             </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">
+            <a href="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
               Contact
             </a>
           </nav>
 
-          {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm" className="font-medium">
+            <Button variant="outline" size="sm" className="font-medium" onClick={() => window.location.href = '/dashboard'}>
               <User className="w-4 h-4 mr-2" />
-              Login
+              Dashboard
             </Button>
-            <Button size="sm" className="font-medium hero-gradient">
+            <Button size="sm" className="font-medium hero-gradient" onClick={() => window.location.href = '/deposit'}>
               Get Started
             </Button>
           </div>
@@ -78,31 +74,27 @@ export const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden bg-card border-t border-border">
             <nav className="flex flex-col space-y-4 p-4">
-              <a href="#home" className="text-foreground hover:text-primary transition-colors font-medium py-2">
+              <a href="/" className="text-foreground hover:text-primary transition-colors font-medium py-2">
                 Home
               </a>
-              <a href="#features" className="text-foreground hover:text-primary transition-colors font-medium py-2">
-                Features
-              </a>
-              <a href="#how-it-works" className="text-foreground hover:text-primary transition-colors font-medium py-2">
+              <a href="/how-it-works" className="text-foreground hover:text-primary transition-colors font-medium py-2">
                 How It Works
               </a>
-              <a href="#farmers" className="text-foreground hover:text-primary transition-colors font-medium py-2">
-                For Farmers
+              <a href="/dashboard" className="text-foreground hover:text-primary transition-colors font-medium py-2">
+                Dashboard
               </a>
-              <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium py-2">
+              <a href="/contact" className="text-foreground hover:text-primary transition-colors font-medium py-2">
                 Contact
               </a>
               <div className="flex flex-col space-y-3 pt-4 border-t border-border">
-                <Button variant="outline" size="sm" className="font-medium">
+                <Button variant="outline" size="sm" className="font-medium" onClick={() => window.location.href = '/dashboard'}>
                   <User className="w-4 h-4 mr-2" />
-                  Login
+                  Dashboard
                 </Button>
-                <Button size="sm" className="font-medium hero-gradient">
+                <Button size="sm" className="font-medium hero-gradient" onClick={() => window.location.href = '/deposit'}>
                   Get Started
                 </Button>
               </div>
