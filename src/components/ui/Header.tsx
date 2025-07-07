@@ -53,6 +53,9 @@ export const Header = () => {
             <a href="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
               Contact
             </a>
+            <a href="/support" className="text-foreground hover:text-primary transition-colors font-medium">
+              Support
+            </a>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -88,6 +91,9 @@ export const Header = () => {
               </a>
               <a href="/contact" className="text-foreground hover:text-primary transition-colors font-medium py-2">
                 Contact
+              </a>
+              <a href="/support" className="text-foreground hover:text-primary transition-colors font-medium py-2">
+                Support
               </a>
               <div className="flex flex-col space-y-3 pt-4 border-t border-border">
                 <Button variant="outline" size="sm" className="font-medium" onClick={() => window.location.href = '/dashboard'}>

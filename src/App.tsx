@@ -12,6 +12,14 @@ import Profile from "./pages/Profile";
 import HowItWorks from "./pages/HowItWorks";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import DigitalWarehouseReceipts from "./pages/DigitalWarehouseReceipts";
+import SecureStorage from "./pages/SecureStorage";
+import CreditAccess from "./pages/CreditAccess";
+import MarketLinkage from "./pages/MarketLinkage";
+import QualityAssurance from "./pages/QualityAssurance";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import Support from "./pages/Support";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +38,14 @@ const App = () => (
           <Route path="/profile" element={<Profile />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/digital-warehouse-receipts" element={<DigitalWarehouseReceipts />} />
+          <Route path="/secure-storage" element={<SecureStorage />} />
+          <Route path="/credit-access" element={<CreditAccess />} />
+          <Route path="/market-linkage" element={<MarketLinkage />} />
+          <Route path="/quality-assurance" element={<QualityAssurance />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/support" element={<Support />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -43,11 +43,11 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-sm">
-              <li className="opacity-80">Digital Warehouse Receipts</li>
-              <li className="opacity-80">Secure Storage</li>
-              <li className="opacity-80">Credit Access</li>
-              <li className="opacity-80">Market Linkage</li>
-              <li className="opacity-80">Quality Assurance</li>
+              <li><a href="/digital-warehouse-receipts" className="opacity-80 hover:opacity-100 transition-opacity">Digital Warehouse Receipts</a></li>
+              <li><a href="/secure-storage" className="opacity-80 hover:opacity-100 transition-opacity">Secure Storage</a></li>
+              <li><a href="/credit-access" className="opacity-80 hover:opacity-100 transition-opacity">Credit Access</a></li>
+              <li><a href="/market-linkage" className="opacity-80 hover:opacity-100 transition-opacity">Market Linkage</a></li>
+              <li><a href="/quality-assurance" className="opacity-80 hover:opacity-100 transition-opacity">Quality Assurance</a></li>
             </ul>
           </div>
 
