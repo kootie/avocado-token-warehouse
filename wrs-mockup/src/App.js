@@ -271,6 +271,7 @@ function App() {
               </Box>
               <Box display={{ xs: 'none', md: 'flex' }} gap={3} alignItems="center">
                 <Button color="inherit" onClick={() => setDemoPage(0)}>Home</Button>
+                <Button color="inherit" onClick={() => setDemoPage(6)}>About</Button>
                 <Button color="inherit" onClick={() => setDemoPage(1)}>Dashboard</Button>
                 <Button color="inherit" onClick={() => setDemoPage(2)}>Deposit</Button>
                 <Button color="inherit" onClick={() => setDemoPage(3)}>Tokens</Button>
@@ -280,64 +281,66 @@ function App() {
               </Box>
             </Toolbar>
           </AppBar>
-
-          {/* Hero Section */}
-          <Box sx={{
-            width: '100%',
-            minHeight: { xs: 360, md: 420 },
-            background: 'linear-gradient(120deg, #a8e063 0%, #56ab2f 100%)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            flexDirection: { xs: 'column', md: 'row' },
-            px: { xs: 2, md: 8 },
-            py: { xs: 6, md: 8 },
-            color: 'white',
-            position: 'relative',
-          }}>
-            <Box sx={{ flex: 1, zIndex: 2, textAlign: { xs: 'center', md: 'left' } }}>
-              <Typography variant="h2" fontWeight={700} sx={{ fontFamily: 'Montserrat', mb: 2, fontSize: { xs: 32, md: 48 } }}>
-                Empowering Kenyan Farmers
-              </Typography>
-              <Typography variant="h5" sx={{ mb: 4, fontWeight: 400 }}>
-                Secure storage. Digital receipts. Access to credit and markets.
-              </Typography>
-              <Button variant="contained" color="secondary" size="large" sx={{ borderRadius: 3, fontWeight: 700, fontSize: 18 }} onClick={() => { setDemoAuthMode('login'); setDemoPage(100); }}>
-                Get Started
-              </Button>
-            </Box>
-            <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', mt: { xs: 4, md: 0 } }}>
-              <img src={undrawAdventure} alt="Hero Illustration" style={{ maxWidth: 340, width: '100%', borderRadius: 24, boxShadow: '0 8px 32px 0 rgba(56,142,60,0.10)' }} />
-            </Box>
-          </Box>
-
-          {/* Features Section */}
-          <Container maxWidth="lg" sx={{ mt: { xs: 4, md: 8 }, mb: 6 }}>
-            <Grid container spacing={4} justifyContent="center">
-              <Grid item xs={12} md={4}>
-                <Card sx={{ p: 3, textAlign: 'center', bgcolor: '#e8f5e9', boxShadow: 2 }}>
-                  <WarehouseIcon sx={{ fontSize: 48, color: 'primary.main', mb: 1 }} />
-                  <Typography variant="h6" fontWeight={700} gutterBottom>Certified Warehouses</Typography>
-                  <Typography variant="body1" color="text.secondary">Store your produce in secure, government-certified warehouses across Kenya.</Typography>
-                </Card>
-              </Grid>
-              <Grid item xs={12} md={4}>
-                <Card sx={{ p: 3, textAlign: 'center', bgcolor: '#f1f8e9', boxShadow: 2 }}>
-                  <LocalOfferIcon sx={{ fontSize: 48, color: 'secondary.main', mb: 1 }} />
-                  <Typography variant="h6" fontWeight={700} gutterBottom>Digital Tokens</Typography>
-                  <Typography variant="body1" color="text.secondary">Receive digital receipts (tokens) for your deposits, tradable and usable as collateral.</Typography>
-                </Card>
-              </Grid>
-              <Grid item xs={12} md={4}>
-                <Card sx={{ p: 3, textAlign: 'center', bgcolor: '#e3f2fd', boxShadow: 2 }}>
-                  <MonetizationOnIcon sx={{ fontSize: 48, color: '#388e3c', mb: 1 }} />
-                  <Typography variant="h6" fontWeight={700} gutterBottom>Easy Redemption</Typography>
-                  <Typography variant="body1" color="text.secondary">Redeem your tokens for cash or produce at your convenience, with full transparency.</Typography>
-                </Card>
-              </Grid>
-            </Grid>
-          </Container>
-
+          {/* Render About page if selected */}
+          {demoPage === 6 ? renderAboutPage() : (
+            <>
+              {/* Hero Section */}
+              <Box sx={{
+                width: '100%',
+                minHeight: { xs: 360, md: 420 },
+                background: 'linear-gradient(120deg, #a8e063 0%, #56ab2f 100%)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexDirection: { xs: 'column', md: 'row' },
+                px: { xs: 2, md: 8 },
+                py: { xs: 6, md: 8 },
+                color: 'white',
+                position: 'relative',
+              }}>
+                <Box sx={{ flex: 1, zIndex: 2, textAlign: { xs: 'center', md: 'left' } }}>
+                  <Typography variant="h2" fontWeight={700} sx={{ fontFamily: 'Montserrat', mb: 2, fontSize: { xs: 32, md: 48 } }}>
+                    Empowering Kenyan Farmers
+                  </Typography>
+                  <Typography variant="h5" sx={{ mb: 4, fontWeight: 400 }}>
+                    Secure storage. Digital receipts. Access to credit and markets.
+                  </Typography>
+                  <Button variant="contained" color="secondary" size="large" sx={{ borderRadius: 3, fontWeight: 700, fontSize: 18 }} onClick={() => { setDemoAuthMode('login'); setDemoPage(100); }}>
+                    Get Started
+                  </Button>
+                </Box>
+                <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', mt: { xs: 4, md: 0 } }}>
+                  <img src={undrawAdventure} alt="Hero Illustration" style={{ maxWidth: 340, width: '100%', borderRadius: 24, boxShadow: '0 8px 32px 0 rgba(56,142,60,0.10)' }} />
+                </Box>
+              </Box>
+              {/* Features Section */}
+              <Container maxWidth="lg" sx={{ mt: { xs: 4, md: 8 }, mb: 6 }}>
+                <Grid container spacing={4} justifyContent="center">
+                  <Grid item xs={12} md={4}>
+                    <Card sx={{ p: 3, textAlign: 'center', bgcolor: '#e8f5e9', boxShadow: 2 }}>
+                      <WarehouseIcon sx={{ fontSize: 48, color: 'primary.main', mb: 1 }} />
+                      <Typography variant="h6" fontWeight={700} gutterBottom>Certified Warehouses</Typography>
+                      <Typography variant="body1" color="text.secondary">Store your produce in secure, government-certified warehouses across Kenya.</Typography>
+                    </Card>
+                  </Grid>
+                  <Grid item xs={12} md={4}>
+                    <Card sx={{ p: 3, textAlign: 'center', bgcolor: '#f1f8e9', boxShadow: 2 }}>
+                      <LocalOfferIcon sx={{ fontSize: 48, color: 'secondary.main', mb: 1 }} />
+                      <Typography variant="h6" fontWeight={700} gutterBottom>Digital Tokens</Typography>
+                      <Typography variant="body1" color="text.secondary">Receive digital receipts (tokens) for your deposits, tradable and usable as collateral.</Typography>
+                    </Card>
+                  </Grid>
+                  <Grid item xs={12} md={4}>
+                    <Card sx={{ p: 3, textAlign: 'center', bgcolor: '#e3f2fd', boxShadow: 2 }}>
+                      <MonetizationOnIcon sx={{ fontSize: 48, color: '#388e3c', mb: 1 }} />
+                      <Typography variant="h6" fontWeight={700} gutterBottom>Easy Redemption</Typography>
+                      <Typography variant="body1" color="text.secondary">Redeem your tokens for cash or produce at your convenience, with full transparency.</Typography>
+                    </Card>
+                  </Grid>
+                </Grid>
+              </Container>
+            </>
+          )}
           {/* Footer */}
           <Box sx={{ bgcolor: 'primary.main', color: 'white', py: 3, textAlign: 'center', mt: 'auto' }}>
             <Typography variant="body2">&copy; {new Date().getFullYear()} Warehouse Receipt System (WRS) Kenya. All rights reserved.</Typography>
@@ -345,6 +348,11 @@ function App() {
         </Box>
       </ThemeProvider>
     );
+  }
+
+  // When logged in, if selectedPage === 1, render renderAboutPage()
+  if (selectedPage === 1) {
+    return renderAboutPage();
   }
 
   return (
