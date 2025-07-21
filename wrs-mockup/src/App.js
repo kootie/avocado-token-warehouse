@@ -163,7 +163,6 @@ function App() {
   // Auth state
   const [farmers, setFarmers] = useState([]);
   const [currentFarmer, setCurrentFarmer] = useState(null);
-  const [authMode, setAuthMode] = useState('login');
   const [authFields, setAuthFields] = useState({ username: '', password: '', location: '', mobile: '', farm: '' });
   const [authError, setAuthError] = useState('');
 
@@ -540,7 +539,7 @@ function App() {
             <Button type="submit" variant="contained" color="primary" fullWidth sx={{ mt: 2 }}>
               Login
             </Button>
-            <Button variant="outlined" color="primary" fullWidth sx={{ mt: 2 }} onClick={() => { setAuthMode('register'); setDemoPage(100); }}>
+            <Button variant="outlined" color="primary" fullWidth sx={{ mt: 2 }} onClick={() => { setDemoPage(100); }}>
               Register
             </Button>
           </form>
@@ -610,7 +609,7 @@ function App() {
             <Button type="submit" variant="contained" color="primary" fullWidth sx={{ mt: 2 }}>
               Register
             </Button>
-            <Button variant="outlined" color="primary" fullWidth sx={{ mt: 2 }} onClick={() => { setAuthMode('login'); setDemoPage(100); }}>
+            <Button variant="outlined" color="primary" fullWidth sx={{ mt: 2 }} onClick={() => { setDemoPage(100); }}>
               Login
             </Button>
           </form>
