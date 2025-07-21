@@ -57,7 +57,6 @@ function App() {
   // Auth state
   const [farmers, setFarmers] = useState([]); // {username, password, location, mobile, farm}
   const [currentFarmer, setCurrentFarmer] = useState(null); // {username, ...}
-  const [authMode, setAuthMode] = useState('login'); // 'login' | 'register'
   const [authFields, setAuthFields] = useState({ username: '', password: '', location: '', mobile: '', farm: '' });
   const [authError, setAuthError] = useState('');
 
